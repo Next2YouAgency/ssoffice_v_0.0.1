@@ -1,0 +1,54 @@
+@import url('style-mobile.css');
+body{overflow-x:hidden;background:#E5EDF5;}
+#principal{padding:0;}
+.principal{padding:0;min-height:300px;}
+#topo{
+	background:#0A6DC1;
+	min-height:50px;
+	padding:0;
+}
+#logotipo{margin-top:5px;}
+input[name=form-busca]{
+	float:left;
+	position:absolute;
+	z-index:9999;
+	margin-left:-30px;
+	
+}
+#buscaInfo{width:90%;display:inline;}
+.btn-pesquisa{
+	float:right;
+}
+
+/*Acesso do usuário*/
+#dados-usuarios{padding-left:0;padding-right:0;}
+.navbar-inverse{
+	background-color:transparent!important;
+	border-color:transparent!important;
+}
+.navbar-inverse a{
+	color:#000!important;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+	background:#FFF;
+	color:#000;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+	background:#262626!important;
+	color:#FFF!important;
+}
+#menu-lateral{padding:0;}#menu-lateral ul{list-style:none; padding:5%;}#menu-lateral ul a{text-decoration:none;}
+.texto-menu-lateral{
+	display:block;
+	text-align:justify;
+}
+#conteudo{padding:10px 0px;}
+.topo-content{
+	background:#15C2FB;
+	height:80px;
+}
+.bloco-info{
+	min-height:100px;
+	margin-top:25px;
+	margin-bottom:25px;
+}

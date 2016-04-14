@@ -1,0 +1,100 @@
+@import url('style-mobile.css');
+@import url('style-add.css');
+body{overflow-x:hidden;background:#E5EDF5;padding:0;margin:0}
+#principal{padding:0;margin-top:-20px!important;}
+.principal{padding:0;min-height:300px;}
+#topo{
+	background:#0A6DC1;
+	min-height:50px;
+	padding:0;
+}
+#logotipo{margin-top:5px;float:left;}
+input[name=form-busca]{
+	float:left;
+	position:absolute;
+	z-index:9999;
+	margin-left:-30px;
+	
+}
+#buscaInfo{width:90%;display:inline;}
+.btn-pesquisa{
+	float:left;
+}
+
+/*Acesso do usuário*/
+#dados-usuarios{padding-left:0;padding-right:0;float:left;}
+.navbar-inverse{
+	background-color:transparent!important;
+	border-color:transparent!important;
+}
+.navbar-inverse a{
+	color:#000!important;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover{
+	background:#FFF;
+	color:#000;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+	background:#262626!important;
+	color:#FFF!important;
+}
+#menu-lateral{padding:0;}#menu-lateral ul{list-style:none; padding:5%;}#menu-lateral ul a{text-decoration:none;}
+.texto-menu-lateral{
+	display:block;
+	text-align:justify;
+}
+#conteudo{padding:10px 0px;}
+.topo-content{
+	background:#15C2FB;
+	height:80px;
+}
+.bloco-info{
+	min-height:100px;
+	margin-top:25px;
+	margin-bottom:25px;
+}
+.filtros-padrao form select[name=filtros]{
+    background-color: #337ab7;
+	color:#ffffff;
+	border:1px inset #337ab7;
+}
+.filtros-padrao form select[name=filtros] option{
+	background-color:#ffffff;
+	color:#555;
+	width:200px;
+}
+.btn-imagem{
+	background-image:url(../img/icons-extra/addCriterio.png);
+	background-repeat:no-repeat;
+}
+.no-background{
+	background:none!important;
+	border:none!important;
+}
+.color-white{
+	color:#FFF!important;
+}
+.color-default{
+	color:#999!important;
+}
+.color-white:hover{
+	background-color:#337ab7!important;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	background-color:#337ab7!important;
+}
+.navbar-default .navbar-nav>.open>a.no-background, .navbar-default .navbar-nav>.open>a.no-background:focus, .navbar-default .navbar-nav>.open>a.no-background:hover{
+	background:none!important;
+	border:none!important;
+}
+.img-background-text{
+	position:relative;
+	margin-top:-25px;
+	margin-right:5%;
+	opacity:0.5;
+	float:right;
+}
+.link_sem_padrao{
+	text-decoration:none;
+	color:#999;
+}

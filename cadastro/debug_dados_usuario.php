@@ -1,0 +1,31 @@
+﻿<?php
+echo $tipo_pessoa.'<br>';
+echo $tratamento_pessoa.'<br>';
+echo $nome_pessoa.'<br>';
+echo $genero_pessoa.'<br>';
+echo $reg_pessoa.'<br>';
+echo $rg_pessoa.'<br>';
+echo $senha_acesso.'<br>';
+echo $oab_pessoa.'<br>';
+echo $email_pessoa1.'<br>';
+echo $email_pessoa2.'<br>';
+echo $email_pessoa3.'<br>';
+echo $email_pessoa5.'<br>';
+echo $email_pessoa5.'<br>';
+echo $telefone_pessoa1.'<br>';
+echo $telefone_pessoa2.'<br>';
+echo $telefone_pessoa3.'<br>';
+echo $telefone_comercial1.'<br>';
+echo $telefone_comercial2.'<br>';
+echo $telefone_comercial3.'<br>';
+echo $cep_endereco_comercial.'<br>';
+echo $localidade_endereco_comercial.'<br>';
+echo $numero_endereco_comercial.'<br>';
+echo $bairro_endereco_comercial.'<br>';
+echo $complemento_endereco_comercial.'<br>';
+echo $cep_endereco_pessoal.'<br>';
+echo $localidade_endereco_pessoal.'<br>';
+echo $numero_endereco_pessoal.'<br>';
+echo $bairro_endereco_pessoal.'<br>';
+echo $complemento_endereco_pessoal.'<br>';
+?>

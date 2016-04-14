@@ -1,0 +1,115 @@
+# Accompanies this blog post:
+# http://www.seomoz.org/blog/htaccess-file-snippets-for-seos
+
+# NOTE: This file isn't designed to be used all together, some of the rules will conflict,
+# it is meant more as a copy and paste board.
+
+# IMPORTANT: Make sure you test .htaccess changes thoroughly, as it can be easy to make mistakes
+# and then you end up in a bad place!
+
+RewriteEngine On
+
+#
+# 1) Make URLs SEO Friendly and Future Proof
+#
+
+<Files magic>
+	ForceType application/x-httpd-php5
+</Files>
+
+
+#
+# 2) Apply rel="canonical" to PDFs
+#
+
+<Files download.pdf>
+	Header add Link '<http://www.tomanthony.co.uk/httest/pdf-download.html>; rel="canonical"'
+</Files>
+
+<Files product.jpg>
+	Header add Link '<http://www.tomanthony.co.uk/httest/product-page.html>; rel="canonical"'
+</Files>
+
+RewriteRule ([^/]+)\.pdf$ - [E=FILENAME:$1]
+<FilesMatch "\.pdf$">
+	Header add Link '<http://www.tomanthony.co.uk/httest/%{FILENAME}e.html>; rel="canonical"'
+</FilesMatch>
+
+
+#
+# 3) Robots Directives
+#
+
+Header set X-Robots-Tag "noindex, noarchive, nosnippet"
+
+
+#
+# 4) Various Types of Redirect
+#
+
+# Ensure www on all URLs.
+RewriteCond %{HTTP_HOST} ^example.com [NC]
+RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
+
+# Ensure we are using HTTPS version of the site.
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Ensure all URLs have a trailing slash.
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ http://www.example.com/$1/ [L,R=301]
+
+
+#
+# 5) Custom 404 Error Page
+#
+
+ErrorDocument 404 /cool404.html
+
+# Can also do the same for other errors...
+ErrorDocument 500 /cool500.html
+
+
+#
+# 6) Send the Vary Header to Help Crawl Mobile Content
+#
+
+Header append Vary: User-Agent
+
+
+#
+# 7) Improve Caching for Better Site Speed
+#
+
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+	Header set Cache-Control "max-age=28800"
+</FilesMatch>
+
+
+#
+# 8) An Apple-style 'Back Soon' Maintenance Page
+#
+
+RewriteCond %{REMOTE_ADDR}  !your_ip_address
+RewriteCond %{REMOTE_ADDR}  !127.0.0.1
+RewriteRule !offline.php$ http://www.example.com/back_soon.html [L,R=307]
+
+
+#
+# 9) Smarten up Your URLs Even When Your CMS Says No!
+#
+
+# Rewrite a specific product...
+RewriteRule ray-guns/ product.php?id=3123
+
+# ... or groups of them
+RewriteRule product/([0-9]+)/ product.php?id=$1
+
+
+#
+# 10)  Recruit via Your HTTP Headers
+#
+
+Header set Hiring-Now "Looking for a job? Email us!"

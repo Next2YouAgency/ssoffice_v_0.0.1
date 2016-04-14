@@ -1,0 +1,1 @@
+﻿Permissão de outros usuários para o mesmo sistema
